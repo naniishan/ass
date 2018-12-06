@@ -6,5 +6,5 @@
    tasks:
    
    - name: cowsay
-     file: path=/home/ubuntu/ishanji.txt state=present
+     file: path=/home/ubuntu/ishanji.txt state=file
   
