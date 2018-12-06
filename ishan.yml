@@ -1,0 +1,10 @@
+---
+ - hosts: all
+   become: yes
+   remote_user: ubuntu
+   gather_facts: yes
+   tasks:
+   
+   - name: cowsay
+     file: path=/home/ubuntu/ishanji.txt state=present
+  
