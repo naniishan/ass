@@ -1,0 +1,8 @@
+---
+  - name: install nginx
+    apt: name=nginx state=present update_cache=yes
+    when: ansible_distribution == 'Ubuntu'
+  
+  - name: start nginx
+    service: name=nginx state=started
+    when: ansible_distribution == 'Ubuntu' 

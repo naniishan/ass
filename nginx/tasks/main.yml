@@ -1,0 +1,6 @@
+---
+
+
+ - include: ubuntu.yml
+ - include: amazon.yml
+# tasks file for nginx/
