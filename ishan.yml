@@ -6,5 +6,4 @@
    tasks:
    
    - name: cowsay
-     file: path=/home/ubuntu/ishanji.txt state=file
-  
+     apt: name=cowsay state=present update_cache=true
