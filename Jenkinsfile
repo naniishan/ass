@@ -5,7 +5,9 @@ pipeline {
         booleanParam(defaultValue: false, description: '', name: 'java')
         booleanParam(defaultValue: false, description: '', name: 'nginx')
         booleanParam(defaultValue: false, description: '', name: 'tomcat')
-    }
+        booleanParam(defaultValue: false, description: '', name: 'mysql')
+        booleanParam(defaultValue: false, description: '', name: 'postgres')
+   }
     
 
 
@@ -52,6 +54,33 @@ pipeline {
                 sh 'ansible-playbook tomcat.yml'
 
             }
+
         }
+
+ stage('Spedhdhakvxcvxcsdfdsfvxvc'){
+            when {
+                // Only say hello if a "greeting" is requested
+                expression { params.mysql == true }
+            }
+            steps {
+                sh 'ansible-playbook mysql.yml'
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
     }

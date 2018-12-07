@@ -1,9 +1,0 @@
----
- - hosts: all
-   become: yes
-   remote_user: ubuntu
-   gather_facts: yes
-   tasks:
-   
-   - name: cowsay
-     apt: name=cowsay state=present update_cache=true
