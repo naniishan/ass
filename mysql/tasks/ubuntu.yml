@@ -1,4 +1,9 @@
 ---
+
+ - name : install pip
+   apt: name=python-pip state=present update_cache=yes
+   when: ansible_distribution == "Ubuntu"
+
  - name: pip
    pip: name=MYSQL-python 
    when: ansible_distribution == "Ubuntu"
