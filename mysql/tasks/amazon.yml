@@ -1,4 +1,8 @@
 ---
+ - name: pip
+   pip: name=MYSQL-python
+   when: ansible_distribution == "Amazon"
+
  - name: install mysql
    yum: name=mysql-server update_cache=yes state=present force=yes
    when: ansible_distribution == "Amazon"
