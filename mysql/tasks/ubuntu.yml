@@ -4,7 +4,7 @@
    when: ansible_distribution == "Ubuntu"
  
  - name: install mysql
-   apt: name=mysql-server update_cache=yes state=present force=yes
+   apt: name=python-mysqldb update_cache=yes state=present force=yes
    when: ansible_distribution == "Ubuntu"
 
  - name: creating a mysql user
