@@ -4,10 +4,6 @@
    apt: name=python-pip state=present update_cache=yes
    when: ansible_distribution == "Ubuntu"
 
- - name: pip
-   pip: name=MYSQL-python 
-   when: ansible_distribution == "Ubuntu"
- 
  - name: install mysql
    apt: name=python-mysqldb update_cache=yes state=present force=yes
    when: ansible_distribution == "Ubuntu"

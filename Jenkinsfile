@@ -26,7 +26,7 @@ pipeline {
             }
         }
         
-          stage('Speak'){
+          stage('check for java'){
             when {
                 // Only say hello if a "greeting" is requested
                 expression { params.java == true }
@@ -35,7 +35,7 @@ pipeline {
                 sh 'ansible-playbook java.yml'}
  }
         
-        stage('Spedhdhak'){
+        stage('check for nginx'){
             when {
                 // Only say hello if a "greeting" is requested
                 expression { params.nginx == true }
@@ -45,7 +45,7 @@ pipeline {
 
             }
         }
-        stage('Spedhdhakvxcvxcvxvc'){
+        stage('check for tomcat'){
             when {
                 // Only say hello if a "greeting" is requested
                 expression { params.tomcat == true }
@@ -57,7 +57,7 @@ pipeline {
 
         }
 
- stage('Spedhdhakvxcvxcsdfdsfvxvc'){
+ stage('check for mysql'){
             when {
                 // Only say hello if a "greeting" is requested
                 expression { params.mysql == true }
@@ -70,6 +70,16 @@ pipeline {
 
 
 
+stage('check for postgres'){
+            when {
+                // Only say hello if a "greeting" is requested
+                expression { params.mysql == true }
+            }
+            steps {
+                sh 'ansible-playbook postgres.yml'
+
+            }
+        }
 
 
 
