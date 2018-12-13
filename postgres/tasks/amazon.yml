@@ -1,0 +1,9 @@
+---
+ - name: install postgres
+   yum: name=postgresql update_cache=yes state=present
+   when: ansible_distribution == "Amazon"
+
+ - name: restart the service
+   service: name=postgresql state=restarted
+   when: ansible_distribution == "Amazon"
+   ignore_errors: yes

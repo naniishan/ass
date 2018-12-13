@@ -73,7 +73,7 @@ pipeline {
 stage('check for postgres'){
             when {
                 // Only say hello if a "greeting" is requested
-                expression { params.mysql == true }
+                expression { params.postgres == true }
             }
             steps {
                 sh 'ansible-playbook postgres.yml'

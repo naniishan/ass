@@ -1,0 +1,14 @@
+---
+ - name : install pip
+   apt: name=python-pip state=present update_cache=yes
+   when: ansible_distribution == "Ubuntu"
+
+ - name: install postgres
+   apt: name=postgresql state=present update_cache=yes
+   when: ansible_distribution == "Ubuntu"
+
+
+ - name: enable the service
+   service: name=postgresql state=restarted
+   when: ansible_distribution == "Ubuntu"
+   
