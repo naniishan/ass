@@ -91,7 +91,7 @@ steps {
                 echo "flag: ${params.tomcat}"
                 echo "flag: ${params.nginx}"
                 echo "flag: ${params.mysql}"
-                echo "flag: ${params.postgers}"
+                echo "flag: ${params.postgres}"
 
             }
 
