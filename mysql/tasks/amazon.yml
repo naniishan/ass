@@ -1,7 +1,7 @@
 ---
 
  - name: install mysql
-   yum: name=mysql-server update_cache=yes state=present force=yes
+   yum: name=mysql-server update_cache=yes state=present
    when: ansible_distribution == "Amazon"
 
  - name: creating a mysql user
@@ -14,6 +14,6 @@
    when: ansible_distribution == "Amazon"
 
  - name: restarting a service
-   service: name=mysql state=restarted
+   service: name=mysqld state=restarted
    when: ansible_distribution == "Amazon"
  
